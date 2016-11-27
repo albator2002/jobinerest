@@ -1,0 +1,30 @@
+{
+"data":
+	{
+		"firstname": {
+            "type": "String",
+            "required": "FirstName is required"
+        },
+        "lastname": {
+            "type": "String",
+            "required": "LastName is required"
+        },
+		"email": {
+            "type": "String",
+            "required": "Email is required"
+        },
+		"password": {
+            "type": "String",
+            "required": "password is required"
+        },
+        "token": {
+          "type":"string"
+        },
+        "created": {
+          "type": "Date",
+          "default": "setDefaultDate"
+        }
+
+
+	}
+}

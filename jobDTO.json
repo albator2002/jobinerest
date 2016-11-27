@@ -1,0 +1,37 @@
+{
+  "data":
+    {
+      "name": {
+        "type": "String",
+
+        "required": "Name is required"
+      },
+      "type": {
+        "type": "String",
+        "default": "setDefaultMock",
+        "required": "Type is required"
+      },
+      "description": {
+        "type": "String",
+        "default": "setDefaultMock",
+        "required": "Description is required"
+      },
+      "location": {
+        "longitude": {
+          "type":"Number",
+          "default": "setDefaultMockNum",
+          "required": "longitude is required"
+        },
+        "latitude": {
+          "type":"Number",
+          "default": "setDefaultMockNum",
+          "required": "latitude is required"
+        }
+      },
+      "created": {
+        "type": "Date",
+        "default": "setDefaultDate"
+      }
+    }
+    
+}
