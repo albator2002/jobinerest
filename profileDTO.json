@@ -17,6 +17,18 @@
             "type": "String",
             "required": "password is required"
         },
+		"location": {
+			"lng": {
+			  "type":"Number",
+			  "default": "setDefaultMockNum",
+			  "required": "longitude is required"
+			},
+			"lat": {
+			  "type":"Number",
+			  "default": "setDefaultMockNum",
+			  "required": "latitude is required"
+			}
+      },
         "token": {
           "type":"string"
         },

@@ -27,6 +27,18 @@ app.use(function(req, res, next) {
   next();
 });
 
+//Get filtered job list
+    app.get( '[/api/jobs?$filter=]+[\\s\\S]', function( request, response ) {
+        return jobModel.find(request.params.$filter,function( err, requests ) {
+            if( !err ) {
+                return response.send( requests );
+            } else {
+                console.log( err );
+                return response.send('ERROR');
+            }
+        });
+    });
+
 //Get a list of all requests
 app.get( '/api/jobs', function( request, response ) {
     return jobModel.find(function( err, requests ) {
@@ -38,6 +50,9 @@ app.get( '/api/jobs', function( request, response ) {
         }
     });
 });
+
+
+
 //Insert a new job
 app.post( '/api/jobs',cors(), function( request, response ) {
     var jobDTO = new jobModel();

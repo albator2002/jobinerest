@@ -23,7 +23,7 @@ generator.setDefault('setDefaultDate', function () {
     return Date.now();
 });
 generator.setDefault('setDefaultMock', function () {
-    return "fjjfhgh";
+    return "reno";
 });
 generator.setDefault('setDefaultMockNum', function () {
     return 45.595208;

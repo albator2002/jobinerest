@@ -6,6 +6,11 @@
 
         "required": "Name is required"
       },
+      "profileId": {
+        "type": "String",
+        "default": "setDefaultMock",
+        "required": "profileId is required"
+      },
       "type": {
         "type": "String",
         "default": "setDefaultMock",
@@ -17,12 +22,12 @@
         "required": "Description is required"
       },
       "location": {
-        "longitude": {
+        "lng": {
           "type":"Number",
           "default": "setDefaultMockNum",
           "required": "longitude is required"
         },
-        "latitude": {
+        "lat": {
           "type":"Number",
           "default": "setDefaultMockNum",
           "required": "latitude is required"
