@@ -29,7 +29,7 @@
                 "required": "latitude is required"
               }
         },
-        "workTypes": {
+        "worktypes": {
           "type":"String"
         },
         "token": {

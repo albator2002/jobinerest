@@ -106,7 +106,12 @@ app.get( '/api/profile/:id', function( request, response ) {
 app.put( '/api/profiles/:id', function( request, response ) {
     return profileModel.findById( request.params.id, function( err, profileDTO ) {
 
-        profileDTO.data = request.body.data;
+        profileDTO.data.firstname = request.body.data.firstname;
+        profileDTO.data.lastname = request.body.data.lastname;
+        //profileDTO.data.email = request.body.data.email;
+        profileDTO.data.worktypes = request.body.data.worktypes;
+
+
         return profileDTO.save( function( err ) {
             if( !err ) {
                 console.log( 'profile updated' );
