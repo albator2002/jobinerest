@@ -4,41 +4,45 @@
 		"firstname": {
             "type": "String",
             "required": "FirstName is required"
-        },
-        "lastname": {
-            "type": "String",
-            "required": "LastName is required"
-        },
+    },
+    "lastname": {
+        "type": "String",
+        "required": "LastName is required"
+    },
 		"email": {
             "type": "String",
             "required": "Email is required"
-        },
+    },
 		"password": {
             "type": "String",
             "required": "password is required"
-        },
-        "location": {
-              "lng": {
-                "type":"Number",
-                "default": "setDefaultMockNum",
-                "required": "longitude is required"
-              },
-              "lat": {
-                "type":"Number",
-                "default": "setDefaultMockNum",
-                "required": "latitude is required"
-              }
-        },
-        "worktypes": {
-          "type":"String"
-        },
-        "token": {
-          "type":"String"
-        },
-        "created": {
-          "type": "Date",
-          "default": "setDefaultDate"
-        }
+    },
+    "location": {
+          "lng": {
+            "type":"Number",
+            "default": "setDefaultMockNum",
+            "required": "longitude is required"
+          },
+          "lat": {
+            "type":"Number",
+            "default": "setDefaultMockNum",
+            "required": "latitude is required"
+          }
+    },
+    "worktypes": {
+      "type":"String"
+    },
+    "token": {
+      "type":"String"
+    },
+    "created": {
+      "type": "Date",
+      "default": "setDefaultDate"
+    },
+    "available": {
+      "type":"Boolean",
+      "default": "setDefaultBool"
+    }
 
 
 	}

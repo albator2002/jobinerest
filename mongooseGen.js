@@ -28,6 +28,10 @@ generator.setDefault('setDefaultMock', function () {
 generator.setDefault('setDefaultMockNum', function () {
     return 45.595208;
 });
+generator.setDefault('setDefaultBool', function () {
+    return true;
+});
+
 
     
 // Generate the Schema object.

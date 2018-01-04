@@ -60,6 +60,21 @@ app.post( '/api/login',cors(), function( request, response ) {
     });
 });
 
+app.put( '/api/logout/:id', function( request, response ) {
+    return profileModel.findById( request.params.id, function( err, profileDTO ) {
+        profileDTO.data.token = "";      
+        return profileDTO.save( function( err ) {
+            if( !err ) {
+                console.log( 'Logout' );
+                return response.send( profileDTO );
+            } else {
+                console.log( err );
+                return response.send('ERROR');
+            }
+        });
+    });
+});
+
 //Get a list of all profiles
 app.get( '/api/profiles', function( request, response ) {
     return profileModel.find(function( err, requests ) {
@@ -108,10 +123,10 @@ app.put( '/api/profiles/:id', function( request, response ) {
 
         profileDTO.data.firstname = request.body.data.firstname;
         profileDTO.data.lastname = request.body.data.lastname;
-        //profileDTO.data.email = request.body.data.email;
+        profileDTO.data.available = request.body.data.available;
         profileDTO.data.worktypes = request.body.data.worktypes;
-
-
+        profileDTO.data.location = request.body.data.location;
+        
         return profileDTO.save( function( err ) {
             if( !err ) {
                 console.log( 'profile updated' );
